@@ -9,7 +9,7 @@ today = datetime.datetime.today()
 p = PageviewsClient()
 
 # the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
-code = [ '', 'es' ]
+code = [ '' ]
 
 view_total = int()
 
@@ -39,7 +39,7 @@ for c in code:
 	for key, value in views.iteritems():
 
 		v = value.get(t + l)
-
+		print v
 		if isinstance(v, int) == True:
 			a += v
 		else:
