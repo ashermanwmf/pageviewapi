@@ -32,7 +32,7 @@ for c in code:
 	else:
 		l = l + c
 
-	views = p.article_views(w + '.org', [t + l], access='all-access', start=sd , end=ed )
+	views = p.article_views(w, [t + l], access='all-access', start=sd , end=ed)
 
 	a = int()
 
