@@ -32,14 +32,14 @@ for c in code:
 	else:
 		l = l + c
 
-	views = p.article_views(w + '.wikimedia.org', [t + l], access='all-access', start=sd , end=ed )
+	views = p.article_views(w + '.org', [t + l], access='all-access', start=sd , end=ed )
 
 	a = int()
 
 	for key, value in views.iteritems():
 
 		v = value.get(t + l)
-		print v
+		
 		if isinstance(v, int) == True:
 			a += v
 		else:
