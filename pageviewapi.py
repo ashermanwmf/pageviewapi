@@ -11,6 +11,8 @@ p = PageviewsClient()
 # the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
 code = [ '', 'es' ]
 
+view_total = int()
+
 for c in code:
 
 	#what wiki is it on?
@@ -43,4 +45,8 @@ for c in code:
 		else:
 			pass
 
+	view_total += a 
+
 	print t + '/' + c + ' ' + str(a)
+
+print t + '/' + c + ' TOTAL_VIEWS = ' + str(view_total)
