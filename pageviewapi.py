@@ -9,7 +9,7 @@ today = datetime.datetime.today()
 p = PageviewsClient()
 
 # the first blank spot is reserved for the english version or 'original article page'. Added langauge codes after.
-code = [ '' ]
+code = [ '', 'es' ]
 
 for c in code:
 
@@ -23,7 +23,7 @@ for c in code:
 
 	ed = today.strftime('%Y%m%d') 
 
-	l = '%2f'
+	l = '/'
 
 	if c == '':
 		l = ''
