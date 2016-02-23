@@ -13,7 +13,11 @@ code = [ '' ]
 
 for c in code:
 
-	t = sys.argv[1]
+	#what wiki is it on?
+	w = sys.argv[1]
+
+	#what is the article title?
+	t = sys.argv[2]
 
 	sd = '20150901'
 
@@ -26,7 +30,7 @@ for c in code:
 	else:
 		l = l + c
 
-	views = p.article_views('meta.wikimedia.org', [t + l], access='all-access', start=sd , end=ed )
+	views = p.article_views(w + '.wikimedia.org', [t + l], access='all-access', start=sd , end=ed )
 
 	a = int()
 
