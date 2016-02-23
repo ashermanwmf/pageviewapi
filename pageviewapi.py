@@ -6,23 +6,35 @@ from mwviews.api import PageviewsClient
 
 p = PageviewsClient()
 
-t = sys.argv[1]
+# the first blank spot is reserved for the english version or 'original article page'. Added langauge codes after.
+code = [ '', ]
 
-sd = sys.argv[2]
+for c in code:
 
-ed = sys.argv[3]
+	t = sys.argv[1]
 
-views = p.article_views('meta.wikimedia.org', [t], access='all-access', start=sd , end= ed )
+	sd = sys.argv[2]
 
-a = int()
+	ed = sys.argv[3]
 
-for key, value in views.iteritems():
+	l = '%2f'
 
-	v = value.get(t)
-
-	if isinstance(v, int) == True:
-		a += v
+	if c == '':
+		l = ''
 	else:
-		pass
+		l = l + c
 
-print t + ' ' + str(a)
+	views = p.article_views('meta.wikimedia.org', [t + l], access='all-access', start=sd , end= ed )
+
+	a = int()
+
+	for key, value in views.iteritems():
+
+		v = value.get(t)
+
+		if isinstance(v, int) == True:
+			a += v
+		else:
+			pass
+
+	print t + '/' + c + ' ' + str(a)
