@@ -60,9 +60,10 @@ today = datetime.datetime.today()
 p = PageviewsClient()
 
 # the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
-code = [ '' , 'cs' , 'he' , 'da' , 'de' , 'eo' , 'el' , 'es' , 'fr' , 'id' , 'lb' , 'ro' , 'it' , 'ja' , 
-		'lt' , 'ms' , 'mk' , 'mn' , 'no' , 'nan' , 'nb' , 'or' , 'ps' , 'pt' , 'pt-br' , 'pl' , 'sr' , 
-		'sk' , 'sv' , 'pt-br' , 'ru' , 'ta' , 'th' , 'uk' , 'vi' , 'yi' , 'yue' , 'zh']
+code = [ '' ] 
+# 'cs' , 'he' , 'da' , 'de' , 'eo' , 'el' , 'es' , 'fr' , 'id' , 'lb' , 'ro' , 'it' , 'ja' , 
+# 		'lt' , 'ms' , 'mk' , 'mn' , 'no' , 'nan' , 'nb' , 'or' , 'ps' , 'pt' , 'pt-br' , 'pl' , 'sr' , 
+# 		'sk' , 'sv' , 'pt-br' , 'ru' , 'ta' , 'th' , 'uk' , 'vi' , 'yi' , 'yue' , 'zh']
 
 view_total = int()
 
