@@ -5,6 +5,7 @@
 # 3. Arguement two is the name of the article or page.		 			
 # 4. turn graphing on by removing the # in front of drawgraph(graph).	
 # ex: $ python pageviewapi.py commons.wikimedia File:Dog.png
+# (two packages: mwviews and matplotlib)
 #########################################################################
 
 import os
