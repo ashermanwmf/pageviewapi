@@ -1,5 +1,5 @@
 #########################################################################
-# 							How this works								
+# 	How this works								
 # 1. This script accepts two arguments.							  		
 # 2. Argument one is the wiki project <wiki.wiki(m/p)edia>.  			
 # 3. Arguement two is the name of the article or page.		 			
@@ -60,10 +60,9 @@ today = datetime.datetime.today()
 p = PageviewsClient()
 
 # the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
-code = [ '' ] 
-# 'cs' , 'he' , 'de' , 'eo' , 'es' , 'fr' , 'id' , 'lb' , 'ro' , 'it' , 'ja' , 
-# 		'lt' , 'ms' , 'mk' , 'mn' , 'no' , 'nan' , 'nb' , 'or' , 'ps' , 'pt' , 'pl' , 'sr' , 
-# 		'sk' , 'sv' , 'pt-br' , 'ru' , 'ta' , 'th' , 'uk' , 'vi' , 'yi' , 'yue' , 'zh']
+code = [ '' , 'cs' , 'he' , 'da' , 'de' , 'eo' , 'el' , 'es' , 'fr' , 'id' , 'lb' , 'ro' , 'it' , 'ja' , 
+		'lt' , 'ms' , 'mk' , 'mn' , 'no' , 'nan' , 'nb' , 'or' , 'ps' , 'pt' , 'pt-br' , 'pl' , 'sr' , 
+		'sk' , 'sv' , 'pt-br' , 'ru' , 'ta' , 'th' , 'uk' , 'vi' , 'yi' , 'yue' , 'zh']
 
 view_total = int()
 
@@ -120,4 +119,3 @@ for key, value in dictionary.iteritems():
 
 # print the total views of all supages for article.
 print t + ' TOTAL_VIEWS = ' + str(view_total)
-
