@@ -17,6 +17,9 @@ import matplotlib.dates as mdates
 from collections import defaultdict
 from mwviews.api import PageviewsClient
 
+
+# add l = '' for wikipedia pageview per lanugage version
+
 # add subpage extension to article title.
 def checkempty(l, c):
 	if c == '':
@@ -60,8 +63,9 @@ today = datetime.datetime.today()
 
 p = PageviewsClient()
 
-# the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
-code = [ '' ]
+# the first blank spot is reserved for the english (unless modified for wikipedia language versions, then add 'en' first) 
+#	version or 'original article page'. Add langauge codes after.
+code = [ '' , 'es' ]
 
 #add to code array for all language versions of a page
 # , 'es' , 'aa' , 'ab' , 'ae' , 'af' , 'ak' , 'am' , 'an' , 'ar' , 'as' , 
@@ -94,7 +98,7 @@ sys.tracebacklimit = 0
 
 for c in code:
 
-	#what wiki is it on?
+	#what wiki is it on? Add c + '.' + for wikipedia page views per language version
 	w = sys.argv[1]
 
 	#what is the article title?
@@ -105,12 +109,15 @@ for c in code:
 
 	ed = today.strftime('%Y%m%d') 
 
+	# remove for wikipedia views per language version
 	l = '/'
 
+	# remove for wikipedia views per language version
 	l = checkempty(l ,c)
 
 	try:
 
+		# remove +l for wikipedia views per language version 
 		views = p.article_views(w, [t + l], access='all-access', start=sd , end=ed)
 
 		dates = sorted(views.keys())
