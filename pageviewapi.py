@@ -24,7 +24,7 @@ def checkempty(l, c):
 	else:
 		l = l + c
 
-	return l
+	return l 
 
 # create a list of integers to be drawn into line by drawgraph()
 def graphlist(data):
@@ -61,10 +61,26 @@ today = datetime.datetime.today()
 p = PageviewsClient()
 
 # the first blank spot is reserved for the english version or 'original article page'. Add langauge codes after.
-code = [ '' ] 
-# 'cs' , 'he' , 'da' , 'de' , 'eo' , 'el' , 'es' , 'fr' , 'id' , 'lb' , 'ro' , 'it' , 'ja' , 
-# 		'lt' , 'ms' , 'mk' , 'mn' , 'no' , 'nan' , 'nb' , 'or' , 'ps' , 'pt' , 'pt-br' , 'pl' , 'sr' , 
-# 		'sk' , 'sv' , 'pt-br' , 'ru' , 'ta' , 'th' , 'uk' , 'vi' , 'yi' , 'yue' , 'zh']
+code = [ '' ]
+
+#add to code array for all language versions of a page
+# , 'es' , 'aa' , 'ab' , 'ae' , 'af' , 'ak' , 'am' , 'an' , 'ar' , 'as' , 
+# 'av' , 'ay' , 'az' , 'ba' , 'be' , 'bg' , 'bh' , 'bi' , 'bm' , 'bn' , 'bo' , 
+# 'br' , 'bs' , 'ca' , 'ce' , 'ch' , 'co' , 'cr' , 'cs' , 'cu' , 'cv' , 'cy' , 
+# 'da' , 'de' , 'dv' , 'dz' , 'ee' , 'el' , 'eo' , 'es' , 'et' , 'eu' , 'fa' , 
+# 'ff' , 'fi' , 'fj' , 'fo' , 'fr' , 'fy' , 'ga' , 'gd' , 'gl' , 'gn' , 'gu' , 
+# 'gv' , 'ha' , 'he' , 'hi' , 'ho' , 'hr' , 'ht' , 'hu' , 'hy' , 'hz' , 'ia' , 
+# 'id' , 'ie' , 'ig' , 'ii' , 'ik' , 'io' , 'is' , 'it' , 'iu' , 'ja' , 'jv' , 
+# 'ka' , 'kg' , 'ki' , 'kj' , 'kk' , 'kl' , 'km' , 'kn' , 'ko' , 'kr' , 'ks' , 
+# 'ku' , 'kv' , 'kw' , 'ky' , 'la' , 'lb' , 'lg' , 'li' , 'ln' , 'lo' , 'lt' , 
+# 'lu' , 'lv' , 'mg' , 'mh' , 'mi' , 'mk' , 'ml' , 'mn' , 'mr' , 'ms' , 'mt' , 
+# 'my' , 'na' , 'nb' , 'nd' , 'ne' , 'ng' , 'nl' , 'nn' , 'no' , 'nr' , 'nv' , 
+# 'ny' , 'oc' , 'oj' , 'om' , 'or' , 'os' , 'pa' , 'pi' , 'pl' , 'ps' , 'pt' , 
+# 'qu' , 'rm' , 'rn' , 'ro' , 'ru' , 'rw' , 'sa' , 'sc' , 'sd' , 'se' , 'sg' , 
+# 'si' , 'sk' , 'sl' , 'sm' , 'sn' , 'so' , 'sq' , 'sr' , 'ss' , 'st' , 'su' , 
+# 'sv' , 'sw' , 'ta' , 'te' , 'tg' , 'th' , 'ti' , 'tk' , 'tl' , 'tn' , 'to' , 
+# 'tr' , 'ts' , 'tt' , 'tw' , 'ty' , 'ug' , 'uk' , 'ur' , 'uz' , 've' , 'vi' , 
+# 'vo' , 'wa' , 'wo' , 'xh' , 'yi' , 'yo' , 'za' , 'zh' , 'zu' ] 
 
 view_total = int()
 
@@ -74,6 +90,8 @@ t = ''
 
 graph = []
 
+sys.tracebacklimit = 0
+
 for c in code:
 
 	#what wiki is it on?
@@ -82,6 +100,7 @@ for c in code:
 	#what is the article title?
 	t = sys.argv[2]
 
+	# 20150901 is start of tool
 	sd = '20150901'
 
 	ed = today.strftime('%Y%m%d') 
