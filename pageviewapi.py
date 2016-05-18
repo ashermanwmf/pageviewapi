@@ -65,7 +65,7 @@ p = PageviewsClient()
 
 # the first blank spot is reserved for the english (unless modified for wikipedia language versions, then add 'en' first) 
 #	version or 'original article page'. Add langauge codes after.
-code = [ '' , 'es' ]
+code = [ '' ]
 
 #add to code array for all language versions of a page
 # , 'es' , 'aa' , 'ab' , 'ae' , 'af' , 'ak' , 'am' , 'an' , 'ar' , 'as' , 
